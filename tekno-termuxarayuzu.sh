@@ -73,7 +73,7 @@ fi
 }
 # note this is only print 7 charecters
 echo "";
-echo -e "\e[1;34m[*] \e[32mpaketler yükleniyor lütfen bekleyiniz....\e[0m";
+echo -e "\e[1;34m[*] \e[32mPaketler Yükleniyor Lütfen Bekleyiniz...\e[0m";
 echo "";
 (apt update -y && apt upgrade -y) &> /dev/null;
 apt install figlet pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk exa termux-tools -y &> /dev/null;
@@ -81,13 +81,13 @@ rubygem_d &> /dev/null
 termux-wake-lock;
 if [ -e $PREFIX/share/figlet/Remo773.flf ]; then
 	echo -e "\e[1;34m[*] \033[32mRemo773.flf figlet font is present\033[0m";
-	sleep 4
+	sleep 1
 else
 wget https://raw.githubusercontent.com/remo7777/REMO773/master/Remo773.flf &> /dev/null;
-sleep 3
+sleep 1
 cp Remo773.flf $PREFIX/share/figlet/Remo773.flf;
 cp ASCII-Shadow.flf $PREFIX/share/figlet/ASCII-Shadow.flf;
-sleep 3
+sleep 2
 rm Remo773.flf
 fi
 THEADER () 
@@ -114,7 +114,7 @@ if [[ ${#PROC} -gt 8 ]]; then
 	echo ""
 	echo -e "\033[32mPlz enter less than \033[33m9 \033[32mcharacters Name\033[0m" | pv -qL 10;
 	echo ""
-	sleep 4
+	sleep 1
 	clear
 echo -e "\033[01;32m
 teknodroid (2023)
